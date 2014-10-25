@@ -18,9 +18,9 @@ namespace WebAPI
             var formatters = GlobalConfiguration.Configuration.Formatters;
             formatters.Remove(formatters.XmlFormatter);
 
-
-            GlobalConfiguration.Configure(WebApiConfig.Register);
-            //RouteConfig.RegisterRoutes(RouteTable.Routes);
+			//GlobalConfiguration.Configure(WebApiConfig.Register);
+			WebApiConfig.Register(GlobalConfiguration.Configuration);
+			//RouteConfig.RegisterRoutes(RouteTable.Routes);
             
         }
     }
